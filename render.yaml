@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: investment-fraud-detection
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: VIRUS_TOTAL_API_KEY
+        sync: false
