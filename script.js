@@ -55,7 +55,7 @@ document.getElementById('checkButton').addEventListener('click', async () => {
 
         // Step 2: Security Analysis
         updateStep('step2', 0);
-        const vtResponse = await fetch('https://fraud-detection-b7k4.onrender.com/', {
+        const vtResponse = await fetch('http://localhost:10000/check-domain', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ domain }),
@@ -77,7 +77,7 @@ document.getElementById('checkButton').addEventListener('click', async () => {
 
         // Step 5: AI Risk Assessment
         updateStep('step5', 0);
-        const aiResponse = await fetch('https://fraud-detection-b7k4.onrender.com/', {
+        const aiResponse = await fetch('http://localhost:10000/check-ai-fraud', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
